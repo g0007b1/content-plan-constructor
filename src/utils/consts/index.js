@@ -1,0 +1,7 @@
+export const LOGIN_ROUTE = '/login'
+export const ME_ROUTE = '/me'
+export const TEST_ROUTE = '/test'
+export const BOARD_ROUTE = '/board/:id'
+export const REGISTER_ROUTE = '/register'
+export const HOME_ROUTE = '/home'
+export const UNLOGINNED_ROUTE = '/'
