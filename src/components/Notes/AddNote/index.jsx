@@ -50,7 +50,6 @@ export const AddNote = () => {
                         variant="h6"
                         color="textSecondary"
                         component="h2"
-                        gutterBottom
                     >
                         Create a new note
                     </Typography>
@@ -63,12 +62,14 @@ export const AddNote = () => {
                             color="primary"
                             fullWidth
                             required
+                            margin="normal"
                             error={titleError}
                         />
 
                         <TextField
                             onChange={(e) => setDetails(e.target.value)}
                             label="Details"
+                            margin="normal"
                             multiline
                             rows={4}
                             variant="outlined"
@@ -81,6 +82,7 @@ export const AddNote = () => {
                             type="submit"
                             color="primary"
                             variant="contained"
+                            fullWidth
                         >
                             Submit
                         </Button>
