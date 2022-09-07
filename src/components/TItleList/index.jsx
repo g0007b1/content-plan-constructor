@@ -2,6 +2,7 @@ import {memo} from "react";
 import {useSelector} from "react-redux";
 import {BoardTitle} from "../BoardTitle";
 import {useActions} from "../../hooks/useActions";
+import {Box, Container, Typography} from "@mui/material";
 
 export const TitleList = memo(() => {
     const list = useSelector(state => state.boardReducer.titleList)
@@ -12,9 +13,10 @@ export const TitleList = memo(() => {
         addBoard(list.length, login)
     }
     return (
-        <div>
-            {linksArray}
-            <button onClick={addBoardHandler}>+</button>
-        </div>
+        <Container>
+                <Typography component="h1" variant="h5">Мои Контент-планы</Typography>
+                {linksArray}
+                <button onClick={addBoardHandler}>+</button>
+        </Container>
     )
 })

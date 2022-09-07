@@ -13,7 +13,6 @@ const localizer = momentLocalizer(moment);
 export const MyCalendar = React.memo(() => {
     const events = useSelector((state) => state.boardReducer.events)
     console.log('EVENTS::::')
-    // console.log(moment().toDate())
     console.log(events)
     return (
         <div className="calendar">
