@@ -14,7 +14,7 @@ export const boardApi = {
         console.log('updating...')
         return instance.patch(`boards/${id}`, {events, rows, columns})
     },
-    addBoard(len, owner) {
+    addBoard(len, owner, title) {
         return instance.post(`boards`, {
                 "id": `${owner}-0${len + 1}`,
                 "owner": owner,
@@ -22,7 +22,7 @@ export const boardApi = {
                 "columns": [
                     "Название",
                     "Дата",],
-                "title": 'title',
+                "title": `${title}`,
                 "rows": [],
                 "currentDate": {}
             }

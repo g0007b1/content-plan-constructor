@@ -18,9 +18,8 @@ export const Notes = () => {
     })
     const addNoteHandler = () => {
         setAddMod(!addMod)
-
     }
-    console.log(addMod)
+
     return (
         <Box sx={{
             height: 800,

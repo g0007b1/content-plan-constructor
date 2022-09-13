@@ -3,22 +3,15 @@ import {
     Box,
     Button,
     Container,
-    FormControl,
-    FormControlLabel,
-    FormLabel,
-    RadioGroup,
     TextField,
     Typography
 } from "@mui/material";
-import {Radio} from "@mui/icons-material";
 
 export const AddNote = () => {
     const [title, setTitle] = useState("");
     const [details, setDetails] = useState("");
     const [titleError, setTitleError] = useState(false);
     const [detailsError, setDetailsError] = useState(false);
-
-    const [category, setCategory] = useState("todos");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,7 +27,9 @@ export const AddNote = () => {
             setDetailsError(true);
         }
         if (title && details) {
-            //havent used a server bc i was developing this with react sandbox
+            // havent used a server bc i was developing this with react sandbox
+            // отправить
+
         }
     };
 
@@ -51,13 +46,13 @@ export const AddNote = () => {
                         color="textSecondary"
                         component="h2"
                     >
-                        Create a new note
+                        Создать заметку
                     </Typography>
 
                     <Box component='form' onSubmit={handleSubmit} sx={{mt: 1}}>
                         <TextField
                             onChange={(e) => setTitle(e.target.value)}
-                            label="Note Title"
+                            label="Заголовок"
                             variant="outlined"
                             color="primary"
                             fullWidth
@@ -68,7 +63,7 @@ export const AddNote = () => {
 
                         <TextField
                             onChange={(e) => setDetails(e.target.value)}
-                            label="Details"
+                            label="Текст"
                             margin="normal"
                             multiline
                             rows={4}
@@ -84,7 +79,7 @@ export const AddNote = () => {
                             variant="contained"
                             fullWidth
                         >
-                            Submit
+                            Добавить
                         </Button>
                     </Box>
                 </Box>

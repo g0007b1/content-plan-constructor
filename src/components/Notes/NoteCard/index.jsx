@@ -9,7 +9,7 @@ export const NoteCard = ({n}) => {
                 <CardHeader
                     avatar={
                         <Avatar>
-                            {n.category[0].toUpperCase()}
+                            {n.title[0].toUpperCase()}
                         </Avatar>
                     }
                     action={
@@ -18,7 +18,6 @@ export const NoteCard = ({n}) => {
                         </IconButton>
                     }
                     title={n.title}
-                    subheader={n.category}
                 />
                 <CardContent>
                     <Typography variant="body2" color="textSecondary">

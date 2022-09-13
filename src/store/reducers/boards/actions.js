@@ -30,9 +30,10 @@ export const BoardsActions = {
             console.log(response)
         }
     },
-    addBoard: (length, owner) => {
+    addBoard: (length, owner, title) => {
         return async (dispatch) => {
-            const response = await boardApi.addBoard(length, owner)
+            const response = await boardApi.addBoard(length, owner, title)
+            dispatch(BoardsActions.getTitles(owner))
             console.log(response)
         }
     }
